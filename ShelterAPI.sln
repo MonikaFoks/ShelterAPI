@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShelterAPI", "ShelterAPI.csproj", "{9028FBC1-E634-4F42-9F3B-C14276937804}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9028FBC1-E634-4F42-9F3B-C14276937804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9028FBC1-E634-4F42-9F3B-C14276937804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9028FBC1-E634-4F42-9F3B-C14276937804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9028FBC1-E634-4F42-9F3B-C14276937804}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C1EF632-7DA6-42BA-BB4C-D8A2A710EB90}
+	EndGlobalSection
+EndGlobal
