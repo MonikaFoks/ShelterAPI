@@ -1,0 +1,15 @@
+﻿@model ShelterAPI.Models.Pet
+@{
+    ViewBag.Title = Model.PetName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>@Model.PetName</h2>
+<ul>
+    <li>Name: @Model.PetName</li>
+    <li>Type: @Model.Species</li>
+    <li>Birth: @Model.BirthDate</li>
+</ul>
+
+@*TO DO: Zrobić AGE zamiast BIRTH *@

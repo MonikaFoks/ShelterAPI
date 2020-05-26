@@ -20,6 +20,13 @@ namespace ShelterAPI.Controllers
             return View();
         }
 
+        public ActionResult Adopt()
+        {
+            ViewBag.Message = "Your adopt page.";
+
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
