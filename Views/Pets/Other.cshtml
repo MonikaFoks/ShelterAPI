@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<ShelterAPI.Models.Pet>
 
 @{
-    ViewBag.Title = "Pets";
+    ViewBag.Title = "Other";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="h-serif-flex"><img class="icon-sub-content" src="~/Content/Icons/animals-icon.png" alt="animals-icon" width="60" height="60">&emsp;<strong>All animals</strong></h1>
+<h1 class="h-serif-flex"><img class="icon-sub-content" src="~/Content/Icons/pig-face-icon.png" alt="pig-icon" width="45" height="45">&emsp;<strong>Others</strong></h1>
 <br />
 <br />
 
 @if (!Model.Any())
 {
-    <p>We don't have any pets!</p>
+    <p>We don't have any other pets!</p>
 }
 else
 {
@@ -28,9 +28,7 @@ else
                         <input type="button" class="btn btn-info" value="Adopt" onclick="location.href='@Url.Action("Details", "Pets",new { id = pet.Id }, null)'" />
                     </div>
                 </div>
-
             </div>
         }
-
     </div>
 }

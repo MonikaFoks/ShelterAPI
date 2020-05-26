@@ -29,6 +29,24 @@ namespace ShelterAPI.Controllers
             return View(pets);
         }
 
+        public ViewResult Dogs()
+        {
+            var dogs = _context.Pets.ToList().Where(d => d.Species == "Dog");
+            return View(dogs);
+        }
+
+        public ViewResult Cats()
+        {
+            var cats = _context.Pets.ToList().Where(c => c.Species == "Cat");
+            return View(cats);
+        }
+
+        public ViewResult Other()
+        {
+            var other = _context.Pets.ToList().Where(o => (o.Species != "Cat" && o.Species != "Dog"));
+            return View(other);
+        }
+
         public ActionResult Details(int id)
         {
             var pet = _context.Pets.SingleOrDefault(p => p.Id == id);
