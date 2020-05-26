@@ -282,6 +282,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap_united.css" />
+    <Content Include="Content\Icons\dog-face-icon.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -322,6 +323,7 @@
     <Content Include="Views\Forum\AddReturn.cshtml" />
     <Content Include="Views\Pets\Index.cshtml" />
     <Content Include="Views\Pets\Details.cshtml" />
+    <Content Include="Views\Pets\NewOnes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
