@@ -7,9 +7,10 @@
 
 <h2>@Model.PetName</h2>
 <ul>
+    <img class="profile-content-right" src="~/PetPics/@Model.PhotoPath" alt="@Model.PetName Photo" height="200" width="300">
     <li>Name: @Model.PetName</li>
     <li>Type: @Model.Species</li>
-    <li>Birth: @Model.BirthDate</li>
+    <li>In shelter from: @Model.AddedDate.Value.ToShortDateString()</li>
 </ul>
 
 @*TO DO: Zrobić AGE zamiast BIRTH *@

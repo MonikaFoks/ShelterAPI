@@ -13,19 +13,22 @@
 }
 else
 {
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Pet</th>
-            </tr>
-            <tbody>
-                @foreach(var pet in Model)
-                {
-                    <tr>
-                        <td>@Html.ActionLink(pet.PetName, "Details", "Pets", new { id = pet.Id }, null)</td>
-                    </tr>
-                }
-            </tbody>
-        </thead>
-    </table>
-}
+    <div class="row">
+        @foreach(var pet in Model)
+        {
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                
+                    <img class="profile-content-right" src="~/PetPics/@pet.PhotoPath" alt="@pet.PetName Photo" height="200" width="300">
+                    <div class="inner-profile-content">
+                        <div class="text-inner-profile-content">
+                            <h4>@pet.PetName</h4>
+                            <p>In shelter from @pet.AddedDate.Value.ToShortDateString()</p>
+                            <input type="button" class="btn btn-info" value="Adopt" onclick="location.href='@Url.Action("Details", "Pets",new { id = pet.Id }, null)'" />
+                        </div>
+                    </div>
+                
+            </div>
+        }
+        
+    </div>
+ }

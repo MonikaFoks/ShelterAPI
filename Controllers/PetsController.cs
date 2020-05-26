@@ -40,14 +40,6 @@ namespace ShelterAPI.Controllers
             return View(pet);
         }
 
-        private IEnumerable<Pet> GetPets()
-        {
-            return new List<Pet>
-            {
-
-            };
-
-        }
         
     }
 }

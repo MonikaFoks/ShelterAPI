@@ -248,6 +248,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Migrations\202005261132239_AddedPhotoPathToPets.cs" />
+    <Compile Include="Migrations\202005261132239_AddedPhotoPathToPets.designer.cs">
+      <DependentUpon>202005261132239_AddedPhotoPathToPets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005261141376_ChangedBirthToAdded.cs" />
+    <Compile Include="Migrations\202005261141376_ChangedBirthToAdded.designer.cs">
+      <DependentUpon>202005261141376_ChangedBirthToAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ShelterContext.cs" />
     <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -278,6 +286,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="PetPics\funia.jpg" />
+    <Content Include="PetPics\gruba.jpg" />
     <Content Include="readme.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -307,7 +317,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Home\Adopt.cshtml" />
     <Content Include="Views\Shared\Index.cshtml" />
     <Content Include="Views\Forum\New.cshtml" />
     <Content Include="Views\Forum\AddReturn.cshtml" />
@@ -334,6 +343,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005251803146_Initial.resx">
       <DependentUpon>202005251803146_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005261132239_AddedPhotoPathToPets.resx">
+      <DependentUpon>202005261132239_AddedPhotoPathToPets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005261141376_ChangedBirthToAdded.resx">
+      <DependentUpon>202005261141376_ChangedBirthToAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -15,10 +15,11 @@ namespace ShelterAPI.Models
         public string Breed { get; set; }
         public string Description { get; set; }
         public int ShelterId { get; set; }
-        public DateTime? BirthDate { get; set; }
+        public DateTime? AddedDate { get; set; }
         [Required]
         public bool IsAdopted { get; set; }
 
+        public string PhotoPath { get; set; }
         public virtual Shelter Shelter { get; set; }
     }
 }
