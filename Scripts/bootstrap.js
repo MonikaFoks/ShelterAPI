@@ -136,6 +136,10 @@ if (typeof jQuery === 'undefined') {
       removeElement()
   }
 
+    $(document).ready(function () {
+        $(".dropdown-toggle").dropdown();
+    });
+
 
   // ALERT PLUGIN DEFINITION
   // =======================

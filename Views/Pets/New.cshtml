@@ -1,0 +1,45 @@
+﻿@model ShelterAPI.ViewModels.NewPetViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Pet </h2>
+
+@using (Html.BeginForm("Create", "Pets"))
+{
+    <div class="form-group">
+        <label>Name</label>
+        @Html.TextBoxFor(m => m.Pet.PetName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Breed</label>
+        @Html.TextBoxFor(m => m.Pet.Breed, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>In shelter from</label>
+        @Html.TextBoxFor(m => m.Pet.AddedDate, new { @class = "form-control", type = "date" })
+    </div>
+    <div>
+        <label>Species</label>
+        @Html.DropDownListFor(m => m.Pet.Species,
+                            new SelectList(Enum.GetValues(typeof(ShelterAPI.Models.Species))),
+                            "Select species",
+                            new { @class = "form-control" })
+    </div>
+    <br />
+    <div>
+        <label>Shelter</label>
+        @Html.DropDownListFor(m => m.Pet.ShelterId, new SelectList(Model.Shelters, "Id", "City"),
+                              "Select shelter", new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Description</label>
+        @Html.TextAreaFor(m => m.Pet.Description, new { @class = "form-control" })
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
