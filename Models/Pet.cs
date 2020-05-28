@@ -22,4 +22,11 @@ namespace ShelterAPI.Models
         public string PhotoPath { get; set; }
         public virtual Shelter Shelter { get; set; }
     }
+
+    public enum Species
+    {
+        Dog,
+        Cat,
+        Other
+    }
 }

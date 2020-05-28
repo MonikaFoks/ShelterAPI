@@ -257,26 +257,25 @@
       <DependentUpon>202005261141376_ChangedBirthToAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ShelterContext.cs" />
-    <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PetsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Mapper\ForumMap.cs" />
     <Compile Include="Migrations\202005251803146_Initial.cs" />
     <Compile Include="Migrations\202005251803146_Initial.designer.cs">
       <DependentUpon>202005251803146_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\Forum.cs" />
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\Shelter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewPetViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animals_background.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -322,17 +321,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\Index.cshtml" />
-    <Content Include="Views\Forum\New.cshtml" />
-    <Content Include="Views\Forum\AddReturn.cshtml" />
     <Content Include="Views\Pets\Index.cshtml" />
     <Content Include="Views\Pets\Details.cshtml" />
     <Content Include="Views\Pets\Dogs.cshtml" />
     <Content Include="Views\Pets\Cats.cshtml" />
     <Content Include="Views\Pets\Other.cshtml" />
+    <Content Include="Views\Pets\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

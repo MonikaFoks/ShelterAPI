@@ -1,6 +1,7 @@
 ﻿using Fluent.Infrastructure.FluentDBContext;
 using Fluent.Infrastructure.FluentModel;
 using ShelterAPI.Models;
+using ShelterAPI.ViewModels;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -56,6 +57,23 @@ namespace ShelterAPI.Controllers
             }
 
             return View(pet);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Pet pet)
+        {
+            _context.Pets.Add(pet);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Pets");
+        }
+        public ActionResult New()
+        {
+            var shelters = _context.Shelters.ToList();
+            var viewModel = new NewPetViewModel
+            {
+                Shelters = shelters
+            };
+            return View(viewModel);
         }
 
         

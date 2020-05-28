@@ -9,26 +9,33 @@
 <br />
 <br />
 
-@if (!Model.Any())
-{
-    <p>We don't have any dogs!</p>
-}
-else
-{
-    <div class="row">
-        @foreach (var pet in Model)
+<div class="container container-profiles">
+    <div class="row"></div>
+        <div class="container container-profiles">
+        @if (!Model.Any())
         {
-            <div class="col-xs-12 col-sm-6 col-lg-4">
+            <p>We don't have any dogs!</p>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-xs-12 col-sm-7 col-lg-8 inner-profiles">
+                    @foreach (var pet in Model)
+                    {
+                        <div class="col-xs-12 col-sm-6 col-lg-4">
 
-                <img class="profile-content-right" src="~/PetPics/@pet.PhotoPath" alt="@pet.PetName Photo" height="200" width="300">
-                <div class="inner-profile-content">
-                    <div class="text-inner-profile-content">
-                        <h4>@pet.PetName</h4>
-                        <p>In shelter from @pet.AddedDate.Value.ToShortDateString()</p>
-                        <input type="button" class="btn btn-info" value="Adopt" onclick="location.href='@Url.Action("Details", "Pets",new { id = pet.Id }, null)'" />
-                    </div>
+                            <img class="profile-content-right" src="~/PetPics/@pet.PhotoPath" alt="@pet.PetName Photo" height="200" width="300">
+                            <div class="inner-profile-content">
+                                <div class="text-inner-profile-content">
+                                    <h2>@pet.PetName</h2>
+                                    <p>In shelter from @pet.AddedDate.Value.ToShortDateString()</p>
+                                    <input type="button" class="btn btn-info" value="Adopt" onclick="location.href='@Url.Action("Details", "Pets",new { id = pet.Id }, null)'" />
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
-            </div>
+             </div>
         }
     </div>
-}
+</div>
