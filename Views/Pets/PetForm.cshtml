@@ -1,16 +1,19 @@
-﻿@model ShelterAPI.ViewModels.NewPetViewModel
+﻿@model ShelterAPI.ViewModels.PetViewModel
 @{
-    ViewBag.Title = "New";
+    ViewBag.Title = "PetForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@*TODO: DODAĆ WGRYWANIE ZDJĘĆ!!!*@
+
 <h2>New Pet </h2>
 
-@using (Html.BeginForm("Create", "Pets"))
+@using (Html.BeginForm("Save", "Pets"))
 {
     <div class="form-group">
         <label>Name</label>
         @Html.TextBoxFor(m => m.Pet.PetName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Pet.PetName)
     </div>
     <div class="form-group">
         <label>Breed</label>
@@ -19,6 +22,7 @@
     <div class="form-group">
         <label>In shelter from</label>
         @Html.TextBoxFor(m => m.Pet.AddedDate, new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(m => m.Pet.AddedDate)
     </div>
     <div>
         <label>Species</label>
@@ -26,19 +30,29 @@
                             new SelectList(Enum.GetValues(typeof(ShelterAPI.Models.Species))),
                             "Select species",
                             new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Pet.Species)
     </div>
     <br />
     <div>
         <label>Shelter</label>
         @Html.DropDownListFor(m => m.Pet.ShelterId, new SelectList(Model.Shelters, "Id", "City"),
                               "Select shelter", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Pet.Shelter)
     </div>
     <br />
+
     <div class="form-group">
         <label>Description</label>
         @Html.TextAreaFor(m => m.Pet.Description, new { @class = "form-control" })
     </div>
 
+    <div class="checkbox">
+        <label>@Html.CheckBoxFor(m => m.Pet.IsAdopted) Adopted </label>
+        
+    </div>
+
+    @Html.HiddenFor(m=>m.Pet.Id)
+    @Html.AntiForgeryToken()
 
     <button type="submit" class="btn btn-primary">Save</button>
 }

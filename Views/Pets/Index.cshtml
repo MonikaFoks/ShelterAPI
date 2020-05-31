@@ -6,9 +6,9 @@
 }
 
 <h1 class="h-serif-flex"><img class="icon-sub-content" src="~/Content/Icons/animals-icon.png" alt="animals-icon" width="60" height="60">&emsp;<strong>All animals</strong></h1>
-<br />
-<br />
 
+<input type="button" class="btn btn-info" value="Add new" onclick="location.href='@Url.Action("New", "Pets")'" />
+<br /><br />
 <div class="container container-profiles">
     <div class="row">
             @if (!Model.Any())
@@ -27,7 +27,7 @@
                                 <div class="text-inner-profile-content">
                                     <h2>@pet.PetName</h2>
                                     <p>In shelter from @pet.AddedDate.Value.ToShortDateString()</p>
-                                    <input type="button" class="btn btn-info" value="Adopt" onclick="location.href='@Url.Action("Details", "Pets",new { id = pet.Id }, null)'" />
+                                    <input type="button" class="btn btn-info" value="Adopt" onclick="location.href='@Url.Action("Edit", "Pets",new { id = pet.Id }, null)'" />
                                 </div>
                             </div>
                         </div>

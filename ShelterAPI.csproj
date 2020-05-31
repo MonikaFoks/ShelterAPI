@@ -164,6 +164,9 @@
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -180,6 +183,12 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -248,6 +257,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\API\PetsController.cs" />
     <Compile Include="Migrations\202005261132239_AddedPhotoPathToPets.cs" />
     <Compile Include="Migrations\202005261132239_AddedPhotoPathToPets.designer.cs">
       <DependentUpon>202005261132239_AddedPhotoPathToPets.cs</DependentUpon>
@@ -255,6 +266,14 @@
     <Compile Include="Migrations\202005261141376_ChangedBirthToAdded.cs" />
     <Compile Include="Migrations\202005261141376_ChangedBirthToAdded.designer.cs">
       <DependentUpon>202005261141376_ChangedBirthToAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005281429535_AddedRequiredDate.cs" />
+    <Compile Include="Migrations\202005281429535_AddedRequiredDate.designer.cs">
+      <DependentUpon>202005281429535_AddedRequiredDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005281437150_AddedDisplayNames.cs" />
+    <Compile Include="Migrations\202005281437150_AddedDisplayNames.designer.cs">
+      <DependentUpon>202005281437150_AddedDisplayNames.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ShelterContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -272,7 +291,7 @@
     <Compile Include="Models\Shelter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\NewPetViewModel.cs" />
+    <Compile Include="ViewModels\PetViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animals_background.jpg" />
@@ -326,7 +345,7 @@
     <Content Include="Views\Pets\Dogs.cshtml" />
     <Content Include="Views\Pets\Cats.cshtml" />
     <Content Include="Views\Pets\Other.cshtml" />
-    <Content Include="Views\Pets\New.cshtml" />
+    <Content Include="Views\Pets\PetForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -353,6 +372,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005261141376_ChangedBirthToAdded.resx">
       <DependentUpon>202005261141376_ChangedBirthToAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005281429535_AddedRequiredDate.resx">
+      <DependentUpon>202005281429535_AddedRequiredDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005281437150_AddedDisplayNames.resx">
+      <DependentUpon>202005281437150_AddedDisplayNames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
