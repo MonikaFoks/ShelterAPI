@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
+using AutoMapper;
 
 namespace ShelterAPI
 {
@@ -14,6 +15,7 @@ namespace ShelterAPI
     {
         protected void Application_Start()
         {
+            
             GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
