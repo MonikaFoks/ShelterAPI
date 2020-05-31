@@ -6,7 +6,7 @@
 
 @*TODO: DODAĆ WGRYWANIE ZDJĘĆ!!!*@
 
-<h2>New Pet </h2>
+<h2>Pet edition </h2>
 
 @using (Html.BeginForm("Save", "Pets"))
 {
@@ -51,7 +51,7 @@
         
     </div>
 
-    @Html.HiddenFor(m=>m.Pet.Id)
+    //@Html.HiddenFor(m=>m.Pet.Id)
     @Html.AntiForgeryToken()
 
     <button type="submit" class="btn btn-primary">Save</button>

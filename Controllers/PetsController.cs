@@ -94,6 +94,8 @@ namespace ShelterAPI.Controllers
                 petInDb.PhotoPath = pet.PhotoPath;
             }
 
+            //TODO: naprawić dodawanie/edycję
+
 
             _context.SaveChanges();
             return RedirectToAction("Index", "Pets");

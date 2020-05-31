@@ -15,6 +15,8 @@ namespace ShelterAPI.Models
         public string Species { get; set; }
         public string Breed { get; set; }
         public string Description { get; set; }
+
+        [Required(ErrorMessage = "Please choose shelter.")]
         public int ShelterId { get; set; }
         [Required(ErrorMessage = "Please enter the date.")]
         public DateTime? AddedDate { get; set; }
@@ -22,7 +24,7 @@ namespace ShelterAPI.Models
         public bool IsAdopted { get; set; }
 
         public string PhotoPath { get; set; }
-        [Required(ErrorMessage = "Please choose shelter.")]
+        
         public virtual Shelter Shelter { get; set; }
         //public HttpPostedFileBase ImageFile { get; set; }
     }
