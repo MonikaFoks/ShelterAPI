@@ -42,13 +42,18 @@
     <br />
 
     <div class="form-group">
+        <label>Photo file name:</label>
+        @Html.TextBoxFor(m => m.Pet.PhotoPath, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
         <label>Description</label>
         @Html.TextAreaFor(m => m.Pet.Description, new { @class = "form-control" })
     </div>
 
     <div class="checkbox">
         <label>@Html.CheckBoxFor(m => m.Pet.IsAdopted) Adopted </label>
-        
+
     </div>
 
     //@Html.HiddenFor(m=>m.Pet.Id)
