@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    
+
     @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
@@ -20,7 +20,8 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/Scripts/jquery-3.4.1.min.js")
+    
+    @Scripts.Render("~/bundles/lib")
     @RenderSection("scripts", required: false)
 
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>

@@ -11,16 +11,28 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-right">
 
-                <ul class="nav navbar-nav navbar-right"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-hover="Adopcja">Adoption <i class="caret"></i></span></a><ul class="dropdown-menu" data-dropdown-in="fadeInDown" data-dropdown-out="fadeOutUp">
-                    <li>@Html.ActionLink("All pets", "Index", "Pets")</li>
-                    <li>@Html.ActionLink("Dogs", "Dogs", "Pets")</li>
-                    <li>@Html.ActionLink("Cats", "Cats", "Pets")</li>
-                    <li>@Html.ActionLink("Other", "Other", "Pets")</li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-hover="Adopcja">Adoption <i class="caret"></i></span></a><ul class="dropdown-menu" data-dropdown-in="fadeInDown" data-dropdown-out="fadeOutUp">
+                            <li>@Html.ActionLink("All pets", "AllPets", "Pets")</li>
+                            <li>@Html.ActionLink("Dogs", "Dogs", "Pets")</li>
+                            <li>@Html.ActionLink("Cats", "Cats", "Pets")</li>
+                            <li>@Html.ActionLink("Other", "Other", "Pets")</li>
+                        </ul>
+
+                    <li>@Html.ActionLink("About shelter", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (Session["login"] == null)
+                    {
+                        <li>@Html.ActionLink("Log In", "Login", "Home")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Pet base", "Index", "Pets")</li>
+                        <li>@Html.ActionLink("Log Out", "LogOut", "Home")</li>
+                    }
+
                 </ul>
-                
-                <li>@Html.ActionLink("About shelter", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-            </ul>
             </ul>
         </div>
     </div>
