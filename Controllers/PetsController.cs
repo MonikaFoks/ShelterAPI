@@ -73,6 +73,7 @@ namespace ShelterAPI.Controllers
                 var viewModel = new PetViewModel
                 {
                     Pet = pet,
+
                     Shelters = _context.Shelters.ToList()
                 };
                 return View("PetForm", viewModel);

@@ -28,7 +28,14 @@
                         <div class="inner-profile-content">
                             <div id ="pet" class="text-inner-profile-content">
                                 <h2>@pet.PetName</h2>
-                                <p>In shelter from @pet.AddedDate.Value.ToShortDateString()</p>
+                                @if (pet.IsAdopted == false)
+                                {
+                                    <p>In shelter from @pet.AddedDate.Value.ToShortDateString()</p>
+                                }
+                                else
+                                {
+                                    <p>ADOPTED!</p>
+                                }
 
                                 <input type="button" class="btn btn-info" value="Details" onclick="location.href='@Url.Action("Details", "Pets",new { id = pet.Id }, null)'" />
                                 <button data-pet-id="@pet.Id" class="btn-link js-delete">Delete</button>
