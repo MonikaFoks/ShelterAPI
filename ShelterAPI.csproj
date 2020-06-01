@@ -298,7 +298,7 @@
     <Compile Include="ViewModels\PetViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\animals_background.jpg" />
+    <Content Include="Content\banner.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -415,6 +415,7 @@
     <Content Include="Content\Icons\cat-face-icon.png" />
     <Content Include="Content\Icons\dog-face-icon.png" />
     <Content Include="Content\Icons\pig-face-icon.png" />
+    <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

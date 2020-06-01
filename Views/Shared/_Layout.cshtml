@@ -1,17 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - ShelterAPI</title>
+    <link href="~/Content/Style.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    
 
 </head>
 <body>
 
+    <div class="no-padding no-margin">
+        <div class="container"><img src="~/Content/banner.jpg" class="img-responsive" /></div>
+    </div>
+
     @Html.Partial("_NavBar")
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -20,7 +28,9 @@
         </footer>
     </div>
 
-    
+
+
+
     @Scripts.Render("~/bundles/lib")
     @RenderSection("scripts", required: false)
 

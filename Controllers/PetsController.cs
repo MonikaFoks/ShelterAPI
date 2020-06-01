@@ -88,6 +88,7 @@ namespace ShelterAPI.Controllers
 
             if (pet.Id == 0)
                 _context.Pets.Add(pet);
+
             else
             {
                 var petInDb = _context.Pets.Single(p => p.Id == pet.Id);
@@ -102,7 +103,7 @@ namespace ShelterAPI.Controllers
                 petInDb.PhotoPath = pet.PhotoPath;
             }
 
-            //TODO: naprawić dodawanie/edycję
+            // TODO: Naprawić dodawanie/edycję! Problem: pole HiddenFor w PetForm
 
 
             _context.SaveChanges();
