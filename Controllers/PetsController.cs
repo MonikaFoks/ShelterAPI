@@ -105,8 +105,9 @@ namespace ShelterAPI.Controllers
 
             // TODO: Naprawić dodawanie/edycję! Problem: pole HiddenFor w PetForm
 
-
+            
             _context.SaveChanges();
+            
             return RedirectToAction("Index", "Pets");
         }
         public ActionResult New()

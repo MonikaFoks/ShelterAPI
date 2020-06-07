@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.UI.WebControls;
 
 namespace ShelterAPI.Controllers.API
 {
@@ -82,5 +83,6 @@ namespace ShelterAPI.Controllers.API
             _context.Pets.Remove(petInDb);
             _context.SaveChanges();
         }
+
     }
 }
